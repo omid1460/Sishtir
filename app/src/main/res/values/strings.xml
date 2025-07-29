@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voice cloning omidnini1</string>
+    <string name="record_voice">ضبط صدای شما</string>
+    <string name="start_recording">شروع ضبط</string>
+    <string name="stop_recording">توقف ضبط</string>
+    <string name="recording">در حال ضبط...</string>
+    <string name="click_to_record">برای ضبط صدا کلیک کنید</string>
+    <string name="emotion_selection">انتخاب لحن صدا</string>
+    <string name="text_input">متن مورد نظر</string>
+    <string name="text_placeholder">متن خود را اینجا وارد کنید...\nپشتیبانی از زبان فارسی و ۹۹٪ زبان‌های دنیا</string>
+    <string name="generate_voice">تولید صدا</string>
+    <string name="processing">در حال پردازش...</string>
+    <string name="download">دانلود</string>
+    <string name="share">اشتراک</string>
+    <string name="operations">عملیات</string>
+    <string name="character_count">%1$d / %2$d کاراکتر</string>
+    <string name="voice_generated_successfully">صدا با موفقیت تولید شد</string>
+    <string name="error_generating_voice">خطا در تولید صدا</string>
+    <string name="file_saved_to_music">فایل در پوشه موزیک ذخیره شد</string>
+    <string name="error_saving_file">خطا در ذخیره فایل</string>
+    <string name="generate_voice_first">ابتدا صدا را تولید کنید</string>
+    <string name="audio_file_not_found">فایل صوتی یافت نشد</string>
+    <string name="share_voice_text">صدای تولید شده با Voice Cloning omidnini1</string>
+    <string name="share_voice_title">اشتراک‌گذاری صدا</string>
+    <string name="permissions_required">تمام مجوزها برای عملکرد صحیح برنامه لازم است</string>
+    <string name="recording_started">شروع ضبط صدا</string>
+    <string name="recording_error">خطا در ضبط صدا</string>
+    <string name="tts_initialization_error">خطا در راه‌اندازی موتور تولید صدا</string>
+    <string name="error_sharing">خطا در اشتراک‌گذاری</string>
+    
+    <!-- Emotions -->
+    <string name="emotion_normal">معمولی</string>
+    <string name="emotion_happy">خوشحال</string>
+    <string name="emotion_sad">غمگین</string>
+    <string name="emotion_angry">عصبانی</string>
+    <string name="emotion_excited">هیجان‌زده</string>
+    <string name="emotion_calm">آرام</string>
+</resources>
