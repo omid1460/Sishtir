@@ -4,6 +4,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
     steps:
     - uses: actions/checkout@v4
     
@@ -13,20 +15,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Grant execute permission
-      run: chmod +x gradlew || echo "gradlew not found, will generate it"
-      
-    - name: Generate gradlew if missing
-      run: ./gradlew wrapper || true
-      
-    - name: Build APK
+    - name: Build with retry
       run: |
-        if [ -f "gradlew" ]; then
-          chmod +x gradlew
-          ./gradlew assembleDebug
-        else
-          gradle assembleDebug
-        fi
+        ./gradlew assembleDebug --refresh-dependencies || 
+        (sleep 60 && ./gradlew assembleDebug --stacktrace)
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
