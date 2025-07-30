@@ -6,8 +6,12 @@ plugins {
 implementation 'org.tensorflow:tensorflow-lite-audio:0.4.5'  // یا آخرین نسخه پایدار
 
 repositories {
-    maven {
-        url 'https://google.bintray.com/tensorflow'
-    }
+    google()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://google.bintray.com/tensorflow' } // خط حیاتی
 }
-implementation 'org.tensorflow:tensorflow-lite-task-audio:0.4.0'
+
+dependencies {
+    implementation 'org.tensorflow:tensorflow-lite-task-audio:0.4.4' // یا آخرین نسخه
+}
