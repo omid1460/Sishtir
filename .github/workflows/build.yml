@@ -1,3 +1,9 @@
+- name: Build APK
+  run: |
+    ./gradlew wrapper
+    chmod +x gradlew
+    ./gradlew assembleDebug
+    
 name: Build APK
 on: [push]
 
