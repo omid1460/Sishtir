@@ -10,3 +10,4 @@ repositories {
         url 'https://google.bintray.com/tensorflow'
     }
 }
+implementation 'org.tensorflow:tensorflow-lite-task-audio:0.4.0'
