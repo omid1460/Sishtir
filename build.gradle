@@ -3,3 +3,4 @@ plugins {
     id 'com.android.application' version '8.2.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.22' apply false
 }
+implementation 'org.tensorflow:tensorflow-lite-audio:0.4.5'  // یا آخرین نسخه پایدار
