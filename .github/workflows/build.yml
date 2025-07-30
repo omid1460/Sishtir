@@ -4,21 +4,24 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    
+    timeout-minutes: 10
+
     steps:
     - uses: actions/checkout@v4
-    
+
+    - name: Clean Gradle cache
+      run: rm -rf ~/.gradle/caches
+
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-        
+
     - name: Build with retry
       run: |
-        ./gradlew assembleDebug --refresh-dependencies || 
-        (sleep 60 && ./gradlew assembleDebug --stacktrace)
+        ./gradlew assembleDebug --refresh-dependencies --stacktrace || 
+        (sleep 30 && ./gradlew assembleDebug --info)
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
