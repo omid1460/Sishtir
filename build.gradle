@@ -4,3 +4,9 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.9.22' apply false
 }
 implementation 'org.tensorflow:tensorflow-lite-audio:0.4.5'  // یا آخرین نسخه پایدار
+
+repositories {
+    maven {
+        url 'https://google.bintray.com/tensorflow'
+    }
+}
